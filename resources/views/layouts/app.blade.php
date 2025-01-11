@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    {{-- En la parte d @yield('title','')-> Va de esa forma por lo que esta dentro de una la etiqueta title   --}}
+    <title>@yield('title','')</title> 
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">                        
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -28,6 +29,7 @@
             </nav>
         </header>
 
+{{-- En esta linea cuando ponmeos yield lo que hacemos es que importamos o contruimos las @sections que hay en otros archivos --}}
 @yield('content')
 
 

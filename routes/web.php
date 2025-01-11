@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/home', function () {
-    return 'Página de inicio';
+    return 'Bienvenido a la aplicacion';
 });
 
 Route::get('/notas', function () {

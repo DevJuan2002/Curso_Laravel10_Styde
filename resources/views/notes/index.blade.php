@@ -1,6 +1,8 @@
 @extends('layouts.app')
+{{-- En la linea anterior con extends(Archivo_Hacia_donde_se_exporta) lo que hacemos es exportar este archivo a app.blade.php--}}
 
-
+@section('title','Listado de Notas')
+{{-- Y en la siguiente linea le decimos a blade exportame el contenido que hay entre @section y @endsection  --}}
 @section('content')
         <main class="content">
             <div class="cards">
@@ -114,18 +116,16 @@
                             Recuerda que si retornas un arreglo en una ruta, Laravel lo va a convertir en JSON automáticamente:
                         </p>
 
-                        <pre>
-    &lt;?php
-
-    Route::get('/', function () {
-        return [
-            'Cursos' => [
-                'Primeros pasos con Laravel',
-                'Crea un panel de control con Laravel',
-            ]
-        ];
-    });
-</pre>
+                        <pre>&lt;?php
+                        Route::get('/', function () {
+                        return [
+                        'Cursos' => [
+                        'Primeros pasos con Laravel',
+                        'Crea un panel de control con Laravel',
+                        ]
+                        ];
+                        });
+                        </pre>
 
                         <p>Producirá el siguiente resultado:</p>
 
@@ -183,5 +183,6 @@
                     </footer>
                 </div>
             </div>
-        </main>
+     </main>
+{{-- Y aqui cerramos con la etiqueta @endsection para que el archivo sepa hasta donde debe exportar el html--}}
 @endsection

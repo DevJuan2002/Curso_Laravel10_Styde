@@ -1,6 +1,7 @@
 @extends('layouts.app');
-
-
+{{-- En la linea anterior con extends(Archivo_Hacia_donde_se_exporta) lo que hacemos es exportar este archivo a app.blade.php--}}
+@section('title','Creacion de Notas')
+{{-- Y en la siguiente linea le decimos a blade exportame el contenido que hay entre @section y @endsection  --}}
 @section('content')
        
     <main class="content">
