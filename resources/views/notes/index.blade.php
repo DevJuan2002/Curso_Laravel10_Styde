@@ -15,10 +15,12 @@
                         <p>{{ $note}}</p>
                     </div>
 
+                    {{-- Boton Editar --}}
                     <footer class="card-footer">
-                        <a class="action-link action-edit">
+                        <a href="{{route('notes.edit',['id' =>$loop->iteration])}}" class="action-link action-edit">
                             <i class="icon icon-pen"></i>
                         </a>
+                    {{-- Boton Borrar --}}
                         <a class="action-link action-delete">
                             <i class="icon icon-trash"></i>
                         </a>

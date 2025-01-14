@@ -14,10 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/home', function () {
-    return 'Bienvenido a la aplicacion';
-});
+    return 'Bienvenido a la aplicacion ';
+})->name('home.1');
 
-Route::get('/notas', function () {
+Route::get('/notes', function () {
     
     $notes = [
         'Primera Nota',
@@ -29,32 +29,17 @@ Route::get('/notas', function () {
 
 return view('notes.index')->with('notes', $notes); // El primer argumento del metodo ->with es con el que vamos a llamara la variable en la vista de blade
 // y el segundo argumento es la variable que queremos traer para que el primer argumento envie a blade
-});
+})->name('notes.index');
 
-Route::get('/notas/crear', function () {
+Route::get('/notes/create', function () {
     return view('notes.create');
- });
- 
-Route::get('/notas/{id}', function ($id) {
+ })->name('notes.create');
+
+ Route::get('/notes/{id}', function ($id) {
     return 'Detalle de la nota: '.$id;
-});
+})->name('notes.view');
 
-Route::get('/notas/{id}/editar', function ($id) {
+
+Route::get('/notes/{id}/edit', function ($id) {
     return 'Editar nota: '.$id;
-});
-
-Route::get('cursos', function () {
-    return [
-        'Cursos' => [
-            'Curso de Laravel 10',
-            'Curso de programación orientada a objetos',
-            'Curso de Git',
-        ]
-    ];
-});
-
-
-
-
-
-
+})->name('notes.edit');
