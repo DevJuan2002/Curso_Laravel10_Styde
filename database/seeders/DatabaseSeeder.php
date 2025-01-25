@@ -12,11 +12,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        // Aqui lo que hago es llamar a este archivo que es donde se controlan todos los seeders a el seeder NoteSeeder
+        $this->call(NoteSeeder::class);
     }
 }

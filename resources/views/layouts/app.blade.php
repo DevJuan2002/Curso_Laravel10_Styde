@@ -3,48 +3,21 @@
 <head>
     <meta charset="UTF-8">
     {{-- En la parte d @yield('title','')-> Va de esa forma por lo que esta dentro de una la etiqueta title   --}}
-    <title>@yield('title','')</title> 
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">                        
+    <title>@yield('title','')</title>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="wrap">
-        <header class="head">
-            <a href="#" class="logo"></a>
-            <nav class="main-nav">
-                <ul class="main-nav-list">
-                    <li class="main-nav-item">
-                    
-                        <a href="{{route('notes.index')}}" class="main-nav-link">
-                            <i class="icon icon-th-list"></i>
-                            <span>Ver notas</span>
-                        </a>
-                    </li>
-                    <li class="main-nav-item active">
-                    
-                        <a href={{route("notes.create")}} class="main-nav-link">
-                            <i class="icon icon-pen"></i>
-                            <span>Nueva nota</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-
 {{-- En esta linea cuando ponmeos yield lo que hacemos es que importamos o contruimos las @sections que hay en otros archivos --}}
 @yield('content')
 
 
-<footer class="foot">
-    <div class="ad">
-        <p>
-            Esta aplicación es desarrollada en el curso Laravel 10 - Styde
-        </p>
-    </div>
-    <div class="license">
-        <p>© Derechos Reservados - Styde Limited</p>
-    </div>
-</footer>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+@yield('scripts')
 </div>
 </body>
 </html>
+
